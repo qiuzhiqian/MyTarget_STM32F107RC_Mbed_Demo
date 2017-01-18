@@ -11,10 +11,10 @@ cpu:**STM32F103RCT6**
 | *UART5_TX* | PC_12 | no remap |
 | *UART5_RX* | PD_2  | no remap |
 
-引用资源:
-[mbed在线编译器][1]
-[Mbed源码仓库][2]
-[Stm32f1官方hal库][3]
+引用资源:  
+[mbed在线编译器][1]  
+[Mbed源码仓库][2]  
+[Stm32f1官方hal库][3]  
 
 ## 一、前言
 进入正篇前，需要介绍一些预备知识。
