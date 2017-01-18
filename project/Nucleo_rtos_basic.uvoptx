@@ -467,7 +467,7 @@
       <GroupNumber>3</GroupNumber>
       <FileNumber>19</FileNumber>
       <FileType>1</FileType>
-      <tvExp>1</tvExp>
+      <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>..\mbed\targets\TARGET_STM\TARGET_STM32F1\TARGET_NUCLEO_F103RB\PeripheralPins.c</PathWithFileName>

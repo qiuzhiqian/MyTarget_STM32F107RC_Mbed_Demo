@@ -184,6 +184,16 @@ void serial_free(serial_t *obj)
         __USART3_RELEASE_RESET();
         __USART3_CLK_DISABLE();
     }
+		if (obj_s->uart == UART_4) {
+        __UART4_FORCE_RESET();
+        __UART4_RELEASE_RESET();
+        __UART4_CLK_DISABLE();
+    }
+		if (obj_s->uart == UART_5) {
+        __UART5_FORCE_RESET();
+        __UART5_RELEASE_RESET();
+        __UART5_CLK_DISABLE();
+    }
 
     // Configure GPIOs
     pin_function(obj_s->pin_tx, STM_PIN_DATA(STM_MODE_INPUT, GPIO_NOPULL, 0));
@@ -277,6 +287,16 @@ static void uart3_irq(void)
     uart_irq(2);
 }
 
+static void uart4_irq(void)
+{
+    uart_irq(3);
+}
+
+static void uart5_irq(void)
+{
+    uart_irq(4);
+}
+
 void serial_irq_handler(serial_t *obj, uart_irq_handler handler, uint32_t id)
 {
     struct serial_s *obj_s = SERIAL_S(obj);
@@ -305,6 +325,16 @@ void serial_irq_set(serial_t *obj, SerialIrq irq, uint32_t enable)
     if (obj_s->uart == UART_3) {
         irq_n = USART3_IRQn;
         vector = (uint32_t)&uart3_irq;
+    }
+		
+		if (obj_s->uart == UART_4) {
+        irq_n = UART4_IRQn;
+        vector = (uint32_t)&uart4_irq;
+    }
+		
+		if (obj_s->uart == UART_5) {
+        irq_n = UART5_IRQn;
+        vector = (uint32_t)&uart5_irq;
     }
 
     if (enable) {
