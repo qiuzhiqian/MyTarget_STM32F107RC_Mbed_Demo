@@ -2,7 +2,8 @@
 
 适配平台:
 cpu:**STM32F103RCT6**
-外设:
+外设:  
+
 |peripheral	|pin	|disciption|
 | -------- | ----- | -------- |
 | *LED1*     | PC_0  |          |
@@ -485,6 +486,7 @@ UART5_RX------------PD_2
 				break;
 	}
 具体对应表格如下：
+
 |num|discription|function|
 |----|-----|-----|
 |1|Remap SPI1|__HAL_AFIO_REMAP_SPI1_ENABLE|
