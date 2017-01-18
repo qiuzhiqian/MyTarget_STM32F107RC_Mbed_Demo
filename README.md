@@ -9,7 +9,7 @@ cpu:*stm32f107RC*
  4. UART5_RX----PD_2
  5. OSC----25MHz
 
-if you want a detail document(only chinese document),please mail me.
+[detail port document](./doc/port_doc.md)
 
 email:xia_mengliang@163.com
 
